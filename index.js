@@ -1,7 +1,7 @@
 const { PrismaClient } = require("@prisma/client");
 const express = require("express");
 const app = express();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken'); 
 var cors = require('cors');
 app.use(cors());
