@@ -12,28 +12,7 @@ datasource db {
   url       = env("DATABASE_URL")
  
 }
-model Job{
-  id       Int    @id @default(autoincrement()) // this is your PK
-  user_id  String @unique @default(cuid())   
-  name     String
-  email    String @unique()
-  phone    String
-  password String
-}
-model Token{
-id            Int @id @default(autoincrement())
-user_id       Int
-refreshtoken  String
-}
-model Joblist {
-  id         Int      @id @default(autoincrement())
-  title      String
-  company    String
-  location   String
-  experience Int
-  skills     String[] 
-  url        String
-}
+
 model User {
   id       Int    @id @default(autoincrement())
   name     String
